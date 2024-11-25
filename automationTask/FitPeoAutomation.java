@@ -54,11 +54,11 @@ public class FitPeoAutomation {
 
 		WebElement slider = driver.findElement(By.xpath("//input[@data-index='0']"));
 		Actions actions = new Actions(driver);
-		actions.clickAndHold(slider).moveByOffset(93, 0).release().perform();
+		actions.clickAndHold(slider).moveByOffset(94, 0).release().perform();
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", sliderLabel);
-		for (int i = 0; i < 3; i++) {
-			slider.sendKeys(Keys.ARROW_RIGHT);
-		}
+		
+			slider.sendKeys(Keys.ARROW_LEFT);
+		
 		String sliderValue = slider.getAttribute("value");
 		System.out.println("Slider adjusted to " + sliderValue + ".");
 
@@ -70,11 +70,11 @@ public class FitPeoAutomation {
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", sliderLabel);
 		WebElement slider = driver.findElement(By.xpath("//input[@data-index='0']"));
 		Actions actions = new Actions(driver);
-		actions.clickAndHold(slider).moveByOffset(39, 0).release().perform();
+		actions.clickAndHold(slider).moveByOffset(40, 0).release().perform();
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", sliderLabel);
-		for (int i = 0; i < 3; i++) {
-			slider.sendKeys(Keys.ARROW_RIGHT);
-		}
+		
+			slider.sendKeys(Keys.ARROW_LEFT);
+		
 		String sliderValue = slider.getAttribute("value");
 		System.out.println("Slider adjusted again from 560 to " + sliderValue + ".");
 	}
